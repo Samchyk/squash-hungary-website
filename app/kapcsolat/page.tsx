@@ -53,38 +53,14 @@ export default function KapcsolatPage() {
       <section className="py-20 md:py-32 px-4 md:px-8 max-w-4xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-16">
           {/* Contact Info */}
-          <div className="space-y-8 animate-slide-in-left">
+          <div className="space-y-8 animate-slide-in-left self-center">
             <div className="hover:translate-x-2 transition-transform duration-300">
               <h3 className="font-playfair text-2xl font-bold mb-2">Email</h3>
               <a href="mailto:info@hungarysquash.com" className="text-accent font-bold hover:opacity-80 transition-opacity">
                 info@hungarysquash.com
               </a>
             </div>
-            
-            <div className="hover:translate-x-2 transition-transform duration-300">
-              <h3 className="font-playfair text-2xl font-bold mb-2">Hely</h3>
-              <p className="text-foreground leading-relaxed">
-                Budapest<br />
-                Magyarország
-              </p>
-            </div>
-
-            <div className="hover:translate-x-2 transition-transform duration-300">
-              <h3 className="font-playfair text-2xl font-bold mb-2">Nyitva tartás</h3>
-              <p className="text-foreground leading-relaxed">
-                Hétfő - Péntek: 9:00 - 18:00<br />
-                Szombat - Vasárnap: Zárva
-              </p>
-            </div>
-
-            <div className="pt-8 border-t border-border">
-              <h4 className="font-bold text-sm uppercase tracking-wide text-accent mb-4">Közösségi Média</h4>
-              <p className="text-sm text-muted-foreground">
-                Kövesd a hungarysquash-t a közösségi médiában a legfrissebb hírekért és frissítésekért.
-              </p>
-            </div>
           </div>
-
           {/* Contact Form */}
           <div className="animate-slide-in-right">
             <form onSubmit={handleSubmit} className="space-y-6">
