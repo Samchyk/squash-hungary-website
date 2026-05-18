@@ -93,7 +93,7 @@ export default function AdatvedelmPage() {
           <section>
             <h2 className="font-playfair text-3xl font-bold mb-4">Adatvédelmi Megkeresések</h2>
             <p className="text-foreground leading-relaxed">
-              Ha bármilyen kérdése van az adatvédelmet vagy az Ön személyes adatait illetően, kérjük, lépjen kapcsolatba velünk az alábbi email címen: info@hungarysquash.hu
+              Ha bármilyen kérdése van az adatvédelmet vagy az Ön személyes adatait illetően, kérjük, lépjen kapcsolatba velünk az alábbi email címen: info@hungarysquash.com
             </p>
           </section>
 

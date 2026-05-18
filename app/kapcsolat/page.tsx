@@ -56,8 +56,8 @@ export default function KapcsolatPage() {
           <div className="space-y-8 animate-slide-in-left">
             <div className="hover:translate-x-2 transition-transform duration-300">
               <h3 className="font-playfair text-2xl font-bold mb-2">Email</h3>
-              <a href="mailto:info@hungarysquash.hu" className="text-accent font-bold hover:opacity-80 transition-opacity">
-                info@hungarysquash.hu
+              <a href="mailto:info@hungarysquash.com" className="text-accent font-bold hover:opacity-80 transition-opacity">
+                info@hungarysquash.com
               </a>
             </div>
             
