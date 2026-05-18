@@ -36,12 +36,7 @@ export function BlogCard({ article, index = 0 }: BlogCardProps) {
           </p>
 
           <div className="flex items-center justify-between pt-4 border-t border-border">
-            <div className="flex flex-col">
-              <p className="text-xs font-bold text-foreground">{article.author}</p>
-              <p className="text-xs text-muted-foreground">
-                {new Date(article.date).toLocaleDateString('hu-HU')}
-              </p>
-            </div>
+            <p className="text-xs font-bold text-foreground">{article.author}</p>
             <span className="text-accent font-bold text-sm group-hover:translate-x-2 transition-transform duration-300">
               →
             </span>

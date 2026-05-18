@@ -25,22 +25,19 @@ export default function KapcsolatPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!formData.consent) {
       alert('Kérlek, fogadd el az adatvédelmi nyilatkozatot!')
       return
     }
 
     setLoading(true)
-    
+
     // Simulate form submission
     setTimeout(() => {
       setSubmitted(true)
       setLoading(false)
       setFormData({ name: '', email: '', message: '', consent: false })
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => setSubmitted(false), 5000)
     }, 1000)
   }
 
@@ -59,8 +56,8 @@ export default function KapcsolatPage() {
           <div className="space-y-8 animate-slide-in-left">
             <div className="hover:translate-x-2 transition-transform duration-300">
               <h3 className="font-playfair text-2xl font-bold mb-2">Email</h3>
-              <a href="mailto:info@magyarsquash.hu" className="text-accent font-bold hover:opacity-80 transition-opacity">
-                info@magyarsquash.hu
+              <a href="mailto:info@hungarysquash.hu" className="text-accent font-bold hover:opacity-80 transition-opacity">
+                info@hungarysquash.hu
               </a>
             </div>
             
@@ -161,18 +158,49 @@ export default function KapcsolatPage() {
               >
                 {loading ? 'Küldés alatt...' : 'Üzenet Küldése'}
               </button>
-
-              {submitted && (
-                <div className="p-4 bg-accent bg-opacity-10 border-2 border-accent rounded-sm animate-scale-in">
-                  <p className="text-sm font-bold text-accent">
-                    Köszönöm az üzenetét! Hamarosan válaszolunk.
-                  </p>
-                </div>
-              )}
             </form>
           </div>
         </div>
       </section>
+
+      {submitted && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
+          onClick={() => setSubmitted(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="relative w-full max-w-md bg-card border-2 border-accent rounded-sm shadow-2xl p-8 md:p-10 animate-scale-in text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSubmitted(false)}
+              aria-label="Bezárás"
+              className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-foreground/60 hover:text-accent transition-colors text-xl font-bold"
+            >
+              ×
+            </button>
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent text-accent-foreground flex items-center justify-center text-3xl font-bold">
+              ✓
+            </div>
+            <h3 className="font-playfair text-2xl font-bold mb-3 text-foreground">
+              Üzenet elküldve!
+            </h3>
+            <p className="text-foreground/80 leading-relaxed mb-6">
+              Köszönjük az üzenetét! Hamarosan válaszolunk az Ön által megadott email címre.
+            </p>
+            <button
+              type="button"
+              onClick={() => setSubmitted(false)}
+              className="px-6 py-3 bg-accent text-accent-foreground font-bold rounded-sm hover:scale-105 transition-transform duration-300 shadow-lg"
+            >
+              Rendben
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </main>

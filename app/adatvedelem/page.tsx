@@ -9,7 +9,6 @@ export const metadata = {
 
 export default function AdatvedelmPage() {
   const currentYear = new Date().getFullYear()
-  const lastUpdated = new Date().toLocaleDateString('hu-HU')
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -22,10 +21,6 @@ export default function AdatvedelmPage() {
 
       <article className="py-20 md:py-32 px-4 md:px-8 max-w-4xl mx-auto w-full flex-grow">
         <div className="prose prose-sm md:prose-base max-w-none space-y-8">
-          <div className="p-4 bg-muted rounded-sm border border-border text-sm">
-            <p className="font-bold">Utolsó frissítés: {lastUpdated}</p>
-          </div>
-
           <section>
             <h2 className="font-playfair text-3xl font-bold mb-4">Bevezetés</h2>
             <p className="text-foreground leading-relaxed">
@@ -98,7 +93,7 @@ export default function AdatvedelmPage() {
           <section>
             <h2 className="font-playfair text-3xl font-bold mb-4">Adatvédelmi Megkeresések</h2>
             <p className="text-foreground leading-relaxed">
-              Ha bármilyen kérdése van az adatvédelmet vagy az Ön személyes adatait illetően, kérjük, lépjen kapcsolatba velünk az alábbi email címen: info@magyarsquash.hu
+              Ha bármilyen kérdése van az adatvédelmet vagy az Ön személyes adatait illetően, kérjük, lépjen kapcsolatba velünk az alábbi email címen: info@hungarysquash.hu
             </p>
           </section>
 

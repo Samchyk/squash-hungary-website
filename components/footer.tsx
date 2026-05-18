@@ -41,8 +41,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground border-opacity-20 pt-8">
           <p className="text-sm text-center opacity-80">
-            © {currentYear} contact@hungarysquash.con 
-            <span>Minden jog fenntartva.</span>
+            © {currentYear} contact@hungarysquash.com — <span>Minden jog fenntartva.</span>
           </p>
         </div>
       </div>

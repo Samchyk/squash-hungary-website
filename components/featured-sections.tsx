@@ -60,7 +60,9 @@ export function FeaturedSections() {
                 fill
                 className="object-cover brightness-75 group-hover:brightness-50 group-hover:scale-110 transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30"></div>
+              {!section.highlight && (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/20"></div>
+              )}
             </div>
 
             {/* Content */}
@@ -69,13 +71,17 @@ export function FeaturedSections() {
                 ? 'bg-gradient-to-t from-accent to-accent/50'
                 : ''
             }`}>
-              <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-4 group-hover:text-accent transition-colors duration-300 text-pretty">
+              <h3 className={`font-playfair text-2xl md:text-3xl font-bold mb-4 transition-colors duration-300 text-pretty ${
+                section.highlight
+                  ? 'text-accent-foreground'
+                  : 'text-white group-hover:text-accent'
+              }`}>
                 {section.title}
               </h3>
-              <p className={`text-base leading-relaxed mb-6 opacity-95 ${
-                section.highlight 
-                  ? 'text-accent-foreground' 
-                  : 'text-background'
+              <p className={`text-base leading-relaxed mb-6 ${
+                section.highlight
+                  ? 'text-accent-foreground opacity-95'
+                  : 'text-white/95'
               }`}>
                 {section.description}
               </p>
@@ -83,7 +89,7 @@ export function FeaturedSections() {
                 <span className={`font-bold text-sm transition-all duration-300 group-hover:translate-x-2 inline-block ${
                   section.highlight
                     ? 'text-accent-foreground'
-                    : 'text-secondary'
+                    : 'text-white'
                 }`}>
                   Tudj meg többet →
                 </span>

@@ -77,13 +77,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </div>
               <div>
                 <p className="font-bold text-foreground">{article.author}</p>
-                <p className="text-sm text-muted-foreground">
-                  {new Date(article.date).toLocaleDateString('hu-HU', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </p>
               </div>
             </div>
           </div>

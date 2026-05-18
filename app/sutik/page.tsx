@@ -9,7 +9,6 @@ export const metadata = {
 
 export default function SutikPage() {
   const currentYear = new Date().getFullYear()
-  const lastUpdated = new Date().toLocaleDateString('hu-HU')
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -22,10 +21,6 @@ export default function SutikPage() {
 
       <article className="py-20 md:py-32 px-4 md:px-8 max-w-4xl mx-auto w-full flex-grow">
         <div className="prose prose-sm md:prose-base max-w-none space-y-8">
-          <div className="p-4 bg-muted rounded-sm border border-border text-sm">
-            <p className="font-bold">Utolsó frissítés: {lastUpdated}</p>
-          </div>
-
           <section>
             <h2 className="font-playfair text-3xl font-bold mb-4">Mi Azok a Sütik?</h2>
             <p className="text-foreground leading-relaxed">
